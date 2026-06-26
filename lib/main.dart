@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import './screens/homepage.dart';
+import './provider/task_provider.dart';
 void main(){
   runApp(
     ChangeNotifierProvider(
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+       debugShowCheckedModeBanner: false,
+       home: Homepage() 
+    ) ; 
   }
 }
