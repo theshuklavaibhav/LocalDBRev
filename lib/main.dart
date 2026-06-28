@@ -6,7 +6,7 @@ void main(){
   runApp(
     ChangeNotifierProvider(
       create: (context) => TaskProvider(),
-      builder: (context , widget) => MyApp(),
+      child: MyApp(),
     )
   ) ; 
 }

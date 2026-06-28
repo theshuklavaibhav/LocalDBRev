@@ -9,9 +9,12 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
-      appBar: AppBar(leading: Icon(Icons.task), title: Text("HomePage")),
-
+      backgroundColor: Colors.white , 
+      appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
+        leading: Icon(Icons.task),
+        title: Text("HomePage")
+        ),
       body: Consumer<TaskProvider>(
         builder: (context, taskprovider, child) {
           if (taskprovider.getTaskList.isEmpty) {
@@ -54,7 +57,6 @@ class Homepage extends StatelessWidget {
           );
         },
       ),
-
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (ctx) => AddScreen())); 
