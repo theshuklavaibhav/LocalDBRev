@@ -18,7 +18,7 @@ class TaskProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> _addTask(Task task) async {
+  Future<void> addTask(Task task) async {
     await _dbhelper.insertTask(task);
     await _loadTask();
   }
@@ -28,7 +28,7 @@ class TaskProvider extends ChangeNotifier {
     await _loadTask();
   }
 
-  Future<void> _updateTask(Task task) async {
+  Future<void> updateTask(Task task) async {
     await _dbhelper.updateDb(task);
     await _loadTask(); 
   }
